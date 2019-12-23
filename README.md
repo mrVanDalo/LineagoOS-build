@@ -3,27 +3,33 @@ A setup to build lineage os on a hetzner box
 
 # How to build and install lineag-os on a sony z5 compact
 
+## OPTIONAL: generate fresh ssh keys
+
+```sh
+ssh-keygen -P "" -f sshkey
+```
+
 ## generate machine
 
-```
-cd ./terranix
+```sh
+cd ./01-terranix
 nix-shell --run "create"
 ```
 
 ## ssh to machine
 
-```
-cd ./build
+```sh
+cd ./02-build
 nix-shell --run "mosh-nixserver-lineageOS-builder"
 ```
 
 ## build
 
-copy `./build/build-shell.nix` to `/root/shell.nix`
+copy `./02-build/build-shell.nix` to `/root/shell.nix`
 
 Than run
 
-```
+```sh
 run-step1
 ... do some manual work
 run-step2
@@ -31,7 +37,7 @@ run-step2
 
 ## download and install
 
-copy the resulting `lineage-14.1-<date>-UNOFFICIAL-suzuran.zip` and `recovery.img` to `./install`
+copy the resulting `lineage-14.1-<date>-UNOFFICIAL-suzuran.zip` and `recovery.img` to `./03-install`
 and in there run `nix-shell` 
 and follow the steps of https://wiki.lineageos.org/devices/suzuran/install
 

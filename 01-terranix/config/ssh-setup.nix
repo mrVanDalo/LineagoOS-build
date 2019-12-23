@@ -10,7 +10,7 @@ let
     privateKeyFile = ../../sshkey;
     publicKeyFile = ../../sshkey.pub;
   };
-  target = file: "${toString ../../plops/generated}/${file}";
+  target = file: "${toString ../../02-build/generated}/${file}";
 in
 {
   # configure admin ssh keys
@@ -27,7 +27,6 @@ in
       filename = target "sshkey.pub";
     };
 
-    # configure ssh for plops
     sshConfig  = {
       filename = target "ssh-configuration";
       content =
