@@ -51,8 +51,6 @@ and start from there.
 
 ## cleanup
 
-cleanup do
-
 ```sh
 cd ./01-terranix
 nix-shell --run "clean"
