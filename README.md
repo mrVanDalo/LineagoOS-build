@@ -14,7 +14,7 @@ nix-shell --run "create"
 
 ```
 cd ./plops
-nix-shell --run "mosh-nixserver-lineagos-builder"
+nix-shell --run "mosh-nixserver-lineageOS-builder"
 ```
 
 ## build
@@ -31,7 +31,7 @@ run-step2
 
 ## download and install
 
-copy the resulting `lineag-14.1-<date>-UNOFFICIAL-suzuran.zip` and `recovery.img` to `./install`
+copy the resulting `lineage-14.1-<date>-UNOFFICIAL-suzuran.zip` and `recovery.img` to `./install`
 and in there run `nix-shell` 
 and follow the steps of https://wiki.lineageos.org/devices/suzuran/install
 
