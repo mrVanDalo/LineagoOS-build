@@ -48,3 +48,12 @@ Install
 * [Yalp](https://f-droid.org/en/packages/com.github.yeriomin.yalpstore/)
 
 and start from there.
+
+## cleanup
+
+cleanup do
+
+```sh
+cd ./01-terranix
+nix-shell --run "clean"
+```

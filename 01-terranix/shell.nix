@@ -19,12 +19,19 @@ let
       && ${terraform}/bin/terraform apply
   '';
 
+   clean = pkgs.writers.writeBashBin "clean" ''
+      ${terraform}/bin/terraform destroy
+      rm ${toString ./.}/config.tf.json
+      rm ${toString ./.}/terraform.tfstate*
+    '';
+
 in pkgs.mkShell {
 
   buildInputs = with pkgs; [
     terranix
     terraform
     create
+    clean
   ];
 
 }
