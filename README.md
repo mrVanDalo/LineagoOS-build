@@ -13,13 +13,13 @@ nix-shell --run "create"
 ## ssh to machine
 
 ```
-cd ./plops
+cd ./build
 nix-shell --run "mosh-nixserver-lineageOS-builder"
 ```
 
 ## build
 
-copy the `build-shell.nix` to `/root/shell.nix`
+copy `./build/build-shell.nix` to `/root/shell.nix`
 
 Than run
 
